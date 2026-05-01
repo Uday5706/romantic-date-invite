@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 For You, X 💖</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Falling Hearts Container -->
+    <div id="hearts-container"></div>
+    <!-- Floating Emojis Container -->
+    <div id="floating-emojis"></div>
+
+    <!-- INTRO SCREEN -->
+    <div id="intro-screen" class="screen active">
+        <div class="glow-orb orb1"></div>
+        <div class="glow-orb orb2"></div>
+        <div class="glow-orb orb3"></div>
+        <div class="intro-content">
+            <div class="sparkle-ring">
+                <span class="big-heart">💖</span>
+            </div>
+            <h1 class="title-text">Hey X...</h1>
+            <p class="subtitle-text">I have something to ask you 🥺👉👈</p>
+            <div class="cute-emojis-row">
+                <span class="bounce-emoji" style="animation-delay:0s">🐼</span>
+                <span class="bounce-emoji" style="animation-delay:0.2s">💕</span>
+                <span class="bounce-emoji" style="animation-delay:0.4s">🧸</span>
+                <span class="bounce-emoji" style="animation-delay:0.6s">💗</span>
+                <span class="bounce-emoji" style="animation-delay:0.8s">🐼</span>
+            </div>
+            <button class="btn-magic" onclick="goToQuestion1()">
+                <span>Open with Love 💌</span>
+                <div class="btn-shimmer"></div>
+            </button>
+        </div>
+    </div>
+
+    <!-- QUESTION 1 SCREEN -->
+    <div id="question1-screen" class="screen">
+        <div class="question-card">
+            <div class="card-decoration">
+                <span>🌸</span><span>✨</span><span>🌸</span>
+            </div>
+            <div class="panda-peek left">🐼</div>
+            <div class="panda-peek right">🧸</div>
+            <h2 class="question-text">Sooo... got any plans this Sunday? 🤔</h2>
+            <p class="question-sub">Because my Sunday feels incomplete without you... 🥺</p>
+            <div class="cute-divider">
+                <span>💖</span><span>🐼</span><span>💖</span>
+            </div>
+            <div class="buttons-container">
+                <button class="btn-yes pulse-yes" onclick="answerYes1()">
+                    Yes, I'm free! 😊
+                    <div class="btn-sparkle"></div>
+                </button>
+                <div class="no-btn-wrapper" id="no-btn-wrapper-1">
+                    <button class="btn-no" id="no-btn-1" onclick="tryNo1()">
+                        No 😤
+                    </button>
+                    <div class="blocking-hand" id="blocking-hand">
+                        <span>🤚</span>
+                        <div class="hand-speech-bubble" id="hand-speech">Nope! Not allowed! 😤</div>
+                    </div>
+                </div>
+            </div>
+            <p class="hint-text" id="hint1">(Psst... try pressing No 😏)</p>
+        </div>
+    </div>
+
+    <!-- QUESTION 2 SCREEN -->
+    <div id="question2-screen" class="screen">
+        <div class="question-card card-romantic">
+            <div class="card-decoration">
+                <span>🌹</span><span>💝</span><span>🌹</span>
+            </div>
+            <div class="panda-peek left">🧸</div>
+            <div class="panda-peek right">🐼</div>
+            <h2 class="question-text romantic-text">Would you go on a date with me? 🥰</h2>
+            <p class="question-sub">I promise to make it the most magical day ever... ✨</p>
+            <div class="cute-divider">
+                <span>💕</span><span>🧸</span><span>💕</span>
+            </div>
+            <div class="buttons-container">
+                <button class="btn-yes pulse-yes btn-yes-big" onclick="answerYes2()">
+                    YES! 💖 A thousand times yes!
+                    <div class="btn-sparkle"></div>
+                </button>
+                <button class="btn-no btn-no-runaway" id="no-btn-2">
+                    No 🙈
+                </button>
+            </div>
+            <p class="hint-text" id="hint2">Try catching that No button 😜</p>
+            <div class="running-panda" id="running-panda">🐼💨</div>
+        </div>
+    </div>
+
+    <!-- CELEBRATION SCREEN -->
+    <div id="celebration-screen" class="screen">
+        <div id="confetti-container"></div>
+        <div id="sparkle-burst"></div>
+        <div class="celebration-content">
+            <div class="mega-heart-burst" id="mega-heart-burst">
+                <span>💖</span><span>💕</span><span>💗</span><span>💝</span>
+                <span>💖</span><span>💕</span><span>💗</span><span>💝</span>
+                <span>💖</span><span>💕</span><span>💗</span><span>💝</span>
+            </div>
+            <h1 class="celebration-title">YAAAY! 🎉🥳</h1>
+            <h2 class="celebration-sub">It's a Date! 💖</h2>
+            <p class="celebration-msg">I can't wait to see you Sunday! 🥰</p>
+            <div class="celebration-emojis">
+                <div class="emoji-float-big" style="animation-delay:0s">🐼</div>
+                <div class="emoji-float-big" style="animation-delay:0.3s">💖</div>
+                <div class="emoji-float-big" style="animation-delay:0.6s">🧸</div>
+                <div class="emoji-float-big" style="animation-delay:0.9s">🎉</div>
+                <div class="emoji-float-big" style="animation-delay:1.2s">🐼</div>
+                <div class="emoji-float-big" style="animation-delay:1.5s">💕</div>
+                <div class="emoji-float-big" style="animation-delay:1.8s">🧸</div>
+                <div class="emoji-float-big" style="animation-delay:2.1s">✨</div>
+            </div>
+            <div class="happy-pandas-row">
+                <div class="dancing-panda">🐼<div class="panda-label">me rn</div></div>
+                <div class="heart-between">💞</div>
+                <div class="dancing-teddy">🧸<div class="panda-label">also me</div></div>
+            </div>
+            <div class="final-message">
+                <p>You just made me the happiest person ever! 🥹</p>
+                <p class="promise-text">I promise Sunday will be unforgettable 💫</p>
+            </div>
+            <div class="sparkle-footer">
+                <span>✨</span><span>💖</span><span>🐼</span><span>💖</span><span>✨</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
